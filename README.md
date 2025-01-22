@@ -2,8 +2,8 @@
 # Speech Recognition and Transcription 
 
 This is a Python-based desktop application that allows users to transcribe audio using Google's Speech Recognition API. Users can upload audio files to convert into text or can record the entered text in available voice.
----
-### Features
+
+## Features
 
 Upload Audio File: Transcribe speech from uploaded audio files in formats like .wav, .mp3, and .flac.
 
@@ -17,7 +17,7 @@ Text Output: View the transcription in a text box within the app.
 
 ---
 
-### Requirements
+## Requirements
 
 Dependencies
 
@@ -30,26 +30,32 @@ speechrecognition
 pyaudio (required for microphone input)
 
 
-### Installation
+## Installation
 
 1. Clone the repository:
 
-git clone https://github.com/yourusername/speech-recognition-app.git
+  git clone https://github.com/yourusername/speech-recognition-app.git
 
 
 2. Navigate to the project directory:
 
-cd speech-recognition-app
+  cd speech-recognition-app
 
 
 3. Install the required dependencies:
 
-pip install SpeechRecognition pyaudio
+  pip install SpeechRecognition pyaudio
 
 
 ---
+## Project Structure
 
-### Usage
+app.py: The main application script containing the GUI and transcription logic.
+In the beggining required Python Modules are imported which are further used to build the code.
+
+---
+
+## Usage
 
 1. Run the application:
 
@@ -68,14 +74,26 @@ Record Audio: Click the "Record Audio" button to record your voice and transcrib
 
 ---
 
-### Project Structure
 
-app.py: The main application script containing the GUI and transcription logic.
-In the beggining required Python Modules are imported which are further used to build the code.
+## Customization
+
+1. Adjust Speech Rate: Modify the speech rate by changing this line:
+
+engine.setProperty('rate', 150)  # Adjust the rate (default: 150)
+
+
+2. Adjust Volume: Modify the volume by changing this line:
+
+engine.setProperty('volume', 0.9)  # Set volume (range: 0.0 to 1.0)
+
+
+3. Change Output Filename: Update the filename in the convert_text_to_speech function:
+
+engine.save_to_file(text, "desired_filename.mp3")
 
 ---
 
-### Notes
+## Notes
 
 Ensure your microphone is enabled and working for the Record Audio feature.
 
@@ -86,7 +104,7 @@ Internet connection is required for the transcription as it uses Google's Speech
 
 ---
 
-### Troubleshooting
+## Troubleshooting
 
 Microphone not working: Ensure pyaudio is correctly installed. On some systems, you might need to install additional dependencies (e.g., portaudio for Linux).
 
@@ -95,4 +113,5 @@ Speech not recognized: Check the audio quality or try speaking clearly in a quie
 
 
 ---
+
 
