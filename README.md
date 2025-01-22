@@ -1,149 +1,98 @@
-Text-to-Speech Converter
 
-This project is a simple GUI-based Text-to-Speech (TTS) converter built using Python's tkinter and pyttsx3 libraries. The application allows users to enter text, select a voice, and convert the text into speech. The output is also saved as an audio file (output.mp3).
+# Speech Recognition and Transcription 
 
-
+This is a Python-based desktop application that allows users to transcribe audio using Google's Speech Recognition API. Users can upload audio files to convert into text or can record the entered text in available voice.
 ---
+### Features
 
-Features
+Upload Audio File: Transcribe speech from uploaded audio files in formats like .wav, .mp3, and .flac.
 
-1. Voice Selection: Choose from available system voices.
+Record Audio: Record audio in real time using a microphone and transcribe it instantly.
 
+Simple GUI: User-friendly interface created with Tkinter.
 
-2. Text Input: Enter the text you want to convert to speech in the provided text area.
-
-
-3. Text-to-Speech Conversion: Listen to the text being read out loud.
-
-
-4. Audio File Export: Automatically saves the converted speech as an output.mp3 file.
-
+Text Output: View the transcription in a text box within the app.
 
 
 
 ---
 
-Prerequisites
+### Requirements
 
-Required Libraries
+Dependencies
 
-Python 3.7 or higher
-
-pyttsx3
+Make sure you have the following Python libraries installed:
 
 tkinter (comes pre-installed with Python)
 
+speechrecognition
+
+pyaudio (required for microphone input)
+
+
+### Installation
+
+1. Clone the repository:
+
+git clone https://github.com/yourusername/speech-recognition-app.git
+
+
+2. Navigate to the project directory:
+
+cd speech-recognition-app
+
+
+3. Install the required dependencies:
+
+pip install SpeechRecognition pyaudio
 
 
 ---
 
-Installation
+### Usage
 
-1. Clone this repository or copy the code:
+1. Run the application:
 
-git clone https://github.com/yourusername/text-to-speech-converter.git
-cd text-to-speech-converter
-
-
-2. Install the required library:
-
-pip install pyttsx3
+python app.py
 
 
-3. Run the script:
+2. Use the GUI to:
 
-python text_to_speech.py
+Upload Audio File: Click the "Upload Audio File" button to select an audio file for transcription.
+
+Record Audio: Click the "Record Audio" button to record your voice and transcribe it.
 
 
+3. The transcription will appear in the text box.
 
 
 ---
 
-Usage
+### Project Structure
 
-1. Launch the application:
+app.py: The main application script containing the GUI and transcription logic.
+In the beggining required Python Modules are imported which are further used to build the code.
 
-python text_to_speech.py
+---
 
+### Notes
 
-2. Select a Voice:
+Ensure your microphone is enabled and working for the Record Audio feature.
 
-Choose a voice from the dropdown menu in the "Select Voice" section.
+For accurate results, use clear and noise-free audio files.
 
-
-
-3. Enter Text:
-
-Type or paste the text you want to convert in the text input area.
-
-
-
-4. Convert to Speech:
-
-Click the "Convert to Speech" button to hear the text being read aloud.
-
-
-
-5. Output File:
-
-The speech is saved as output.mp3 in the same directory as the script.
-
-
-
+Internet connection is required for the transcription as it uses Google's Speech Recognition API.
 
 
 ---
 
-Troubleshooting
+### Troubleshooting
 
-1. No Voices Available:
+Microphone not working: Ensure pyaudio is correctly installed. On some systems, you might need to install additional dependencies (e.g., portaudio for Linux).
 
-Ensure your system has text-to-speech voices installed.
-
-Install additional voices based on your operating system.
-
-
-
-2. Permission Errors:
-
-Ensure you have write permissions for the directory where the script is run.
-
-
-
-3. Error During Conversion:
-
-Ensure the text entered is valid and not empty.
-
-
+Speech not recognized: Check the audio quality or try speaking clearly in a quiet environment.
 
 
 
 ---
-
-Customization
-
-1. Adjust Speech Rate: Modify the speech rate by changing this line:
-
-engine.setProperty('rate', 150)  # Adjust the rate (default: 150)
-
-
-2. Adjust Volume: Modify the volume by changing this line:
-
-engine.setProperty('volume', 0.9)  # Set volume (range: 0.0 to 1.0)
-
-
-3. Change Output Filename: Update the filename in the convert_text_to_speech function:
-
-engine.save_to_file(text, "desired_filename.mp3")
-
----
-
-License
-
-This project is open-source and available under the MIT License. Feel free to modify and enhance it as needed!
-
----
-
-Author
- DamarasinguGayathri
 
